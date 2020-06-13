@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xXG7aEROwsdIfJC2QslRCHUUIDWTrUthkicz7f0jypjLA9Giq1415WmRKb5OjY+JJYQM1OWgxqe2TO04wP3EXg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aksaxena\\Desktop\\project\\csharp-kube\\csharp-kube.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aksaxena\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
