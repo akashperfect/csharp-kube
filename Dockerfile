@@ -9,15 +9,15 @@ COPY ["csharp-kube.csproj", "./"]
 RUN dotnet restore "./csharp-kube.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "csharp-kube.csproj" -c Release -o /app/build
+RUN dotnet build "csharp-kube.csproj" -c Build -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "csharp-kube.csproj" -c Release -o /app/publish
+RUN dotnet publish "csharp-kube.csproj" -c Build -o /app/publish
 
 FROM base AS final
 
 RUN apt-get update && apt-get -y install procps
-RUN https://aka.ms/getvsdbgsh | /bin/sh /dev/stdin -v latest -l ~/vsdbg
+RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /vsdbg
 
 WORKDIR /app
 COPY --from=publish /app/publish .
